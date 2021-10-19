@@ -1,4 +1,4 @@
-(module HotChoc (layer F.Cu) (tedit 616ED3AE)
+(module KailhChoc_Diode (layer F.Cu) (tedit 616F1A09)
   (fp_text reference REF** (at 5 -4.8) (layer F.SilkS) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -31,13 +31,11 @@
   (pad "" np_thru_hole circle (at 5.5 0) (size 1.8 1.8) (drill 1.8) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at 0 5.9) (size 3 3) (drill 3) (layers *.Cu *.Mask))
   (pad "" np_thru_hole circle (at -5 3.8) (size 3 3) (drill 3) (layers *.Cu *.Mask))
-  (pad D smd roundrect (at 3.75 5.9) (size 2.5 2.5) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.25))
+  (pad "" smd roundrect (at 3.75 5.9) (size 2.5 2.5) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.25))
   (pad 1 smd roundrect (at -8.75 3.8) (size 2.5 2.5) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.25))
   (pad 2 smd roundrect (at -1.65 -4.8) (size 1.2 1.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.2))
-  (pad D smd roundrect (at 1.65 -4.8) (size 1.2 1.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.2))
-  (pad 2 smd roundrect (at -2.5 -4.8) (size 1 1) (layers F.Cu F.Paste) (roundrect_rratio 0.25))
-  (pad D thru_hole circle (at 3 4) (size 1 1) (drill 0.5) (layers *.Cu))
-  (pad "" np_thru_hole circle (at -8 -5.5) (size 1 1) (drill 1) (layers *.Cu *.Mask))
+  (pad "" smd roundrect (at 1.65 -4.8) (size 1.2 1.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.2))
+  (pad "" thru_hole circle (at 3 4) (size 1 1) (drill 0.5) (layers *.Cu))
   (model ${KIPRJMOD}/3DModels/choc_socket.step
     (offset (xyz 5 -3.7 -1.9))
     (scale (xyz 1 1 1))

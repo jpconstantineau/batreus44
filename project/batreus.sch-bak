@@ -27,6 +27,8 @@ Text GLabel 4600 2450 3    50   Input ~ 0
 R2
 Text GLabel 4300 2450 3    50   Input ~ 0
 R1
+Text GLabel 4000 2450 3    50   Input ~ 0
+R0
 Text GLabel 3700 2450 3    50   Input ~ 0
 L0
 Text GLabel 3400 2450 3    50   Input ~ 0
@@ -132,7 +134,7 @@ Wire Wire Line
 	4100 1250 4400 1250
 Connection ~ 4100 1250
 Wire Wire Line
-	3200 1250 3500 1250
+	3200 1250 4100 1250
 Connection ~ 3200 1250
 Wire Wire Line
 	2900 1250 3200 1250
@@ -158,7 +160,7 @@ Wire Wire Line
 	4100 1600 4400 1600
 Connection ~ 4100 1600
 Wire Wire Line
-	3200 1600 3500 1600
+	3200 1600 4100 1600
 Connection ~ 3200 1600
 Wire Wire Line
 	2900 1600 3200 1600
@@ -255,12 +257,12 @@ $EndComp
 $Comp
 L batreus-rescue:K-Switch S41
 U 1 1 5F8C440C
-P 3600 2000
-F 0 "S41" H 3600 2181 39  0000 C CNN
-F 1 "K" H 3600 2150 50  0001 C CNN
-F 2 "batreus:KailhChoc_Diode" H 3600 2000 50  0001 C CNN
-F 3 "~" H 3600 2000 50  0001 C CNN
-	1    3600 2000
+P 3900 2000
+F 0 "S41" H 3900 2181 39  0000 C CNN
+F 1 "K" H 3900 2150 50  0001 C CNN
+F 2 "batreus:KailhChoc_Diode" H 3900 2000 50  0001 C CNN
+F 3 "~" H 3900 2000 50  0001 C CNN
+	1    3900 2000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -299,12 +301,12 @@ $EndComp
 $Comp
 L batreus-rescue:K-Switch S40
 U 1 1 5F8C43F4
-P 3600 1350
-F 0 "S40" H 3600 1531 39  0000 C CNN
-F 1 "K" H 3600 1500 50  0001 C CNN
-F 2 "batreus:KailhChoc_Diode" H 3600 1350 50  0001 C CNN
-F 3 "~" H 3600 1350 50  0001 C CNN
-	1    3600 1350
+P 3600 2000
+F 0 "S40" H 3600 2181 39  0000 C CNN
+F 1 "K" H 3600 2150 50  0001 C CNN
+F 2 "batreus:KailhChoc_Diode" H 3600 2000 50  0001 C CNN
+F 3 "~" H 3600 2000 50  0001 C CNN
+	1    3600 2000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -687,9 +689,18 @@ Text GLabel 2000 1250 0    50   Input ~ 0
 S3
 Connection ~ 3500 1900
 Wire Wire Line
+	3500 1900 3800 1900
+Connection ~ 3800 1900
+Wire Wire Line
+	3800 1900 4100 1900
+Wire Wire Line
 	3200 2250 3500 2250
 Connection ~ 3200 2250
 Connection ~ 4100 2250
+Wire Wire Line
+	3700 2100 3700 2450
+Wire Wire Line
+	4000 2100 4000 2450
 Text GLabel 6300 1750 0    39   Input ~ 0
 L5
 Text GLabel 6300 1850 0    39   Input ~ 0
@@ -764,26 +775,31 @@ NoConn ~ 6300 1250
 $Comp
 L batreus-rescue:K-Switch S42
 U 1 1 615C8F93
-P 3600 1700
-F 0 "S42" H 3600 1881 39  0000 C CNN
-F 1 "K" H 3600 1850 50  0001 C CNN
-F 2 "batreus:KailhChoc_Diode" H 3600 1700 50  0001 C CNN
-F 3 "~" H 3600 1700 50  0001 C CNN
-	1    3600 1700
-	1    0    0    -1  
-$EndComp
-Connection ~ 3500 2250
-$Comp
-L batreus-rescue:K-Switch S43
-U 1 1 615C9EB0
 P 3600 2350
-F 0 "S43" H 3600 2531 39  0000 C CNN
+F 0 "S42" H 3600 2531 39  0000 C CNN
 F 1 "K" H 3600 2500 50  0001 C CNN
 F 2 "batreus:KailhChoc_Diode" H 3600 2350 50  0001 C CNN
 F 3 "~" H 3600 2350 50  0001 C CNN
 	1    3600 2350
 	1    0    0    -1  
 $EndComp
+Connection ~ 3500 2250
+Wire Wire Line
+	3500 2250 3800 2250
+$Comp
+L batreus-rescue:K-Switch S43
+U 1 1 615C9EB0
+P 3900 2350
+F 0 "S43" H 3900 2531 39  0000 C CNN
+F 1 "K" H 3900 2500 50  0001 C CNN
+F 2 "batreus:KailhChoc_Diode" H 3900 2350 50  0001 C CNN
+F 3 "~" H 3900 2350 50  0001 C CNN
+	1    3900 2350
+	1    0    0    -1  
+$EndComp
+Connection ~ 3800 2250
+Wire Wire Line
+	3800 2250 4100 2250
 $Comp
 L Switch:SW_SPDT SW1
 U 1 1 615CBB96
@@ -857,22 +873,4 @@ Wire Wire Line
 	8150 1350 8150 1200
 Wire Wire Line
 	8150 1200 7950 1200
-Connection ~ 3500 1250
-Wire Wire Line
-	3500 1250 4100 1250
-Connection ~ 3500 1600
-Wire Wire Line
-	3500 1600 4100 1600
-Wire Wire Line
-	3500 1900 4100 1900
-Wire Wire Line
-	3500 2250 4100 2250
-Wire Wire Line
-	3700 1450 3700 1800
-Connection ~ 3700 1800
-Wire Wire Line
-	3700 1800 3700 2100
-Connection ~ 3700 2100
-Wire Wire Line
-	3700 2100 3700 2450
 $EndSCHEMATC

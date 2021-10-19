@@ -1,4 +1,4 @@
-19034505418368752
+19219344085434943
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -83031,6 +83031,13 @@ HotChoc
 
 
 0
+6
+3
+batreus
+KailhChoc_Diode
+
+
+0
 7
 3
 batreus
@@ -83040,3 +83047,10 @@ nice!nano
 0
 28
 26
+batreus
+nice!nano_batt
+
+
+0
+28
+28
